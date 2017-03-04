@@ -99,7 +99,7 @@ export default class Header extends React.Component {
 
   renderDropdown = () => {
     return (
-      <div style={{ 'margin':'auto' }}>
+      <div style={{ 'position' : 'absolute', 'width' : '100px', 'right' : '80px' }}>
         <IconButton
           onTouchTap={this.handleTouchTap}
           iconStyle={styles.largeIcon}
