@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from 'react-mdl'
 import zip from 'lodash/zip'
 
 // Bottom and top parts
@@ -14,6 +14,9 @@ import Pricing from '../components/Pricing'
 import Demos from '../components/Demos'
 import Customers from '../components/Customers'
 import Donate from '../components/Donate'
+
+// Helpers
+import Screen from '../components/Screen';
 
 class MainContainer extends Component {
 
@@ -32,6 +35,7 @@ class MainContainer extends Component {
   render() {
     return (
       <div>
+        <Screen />
         <Header tabs={this.tabs} callback={this.handleChange}/>
         { this.pages[this.state.page] }
         <Footer/>
