@@ -30,7 +30,7 @@ export default class Home extends React.Component {
             </Grid>
           </MediaQuery>
           <MediaQuery maxWidth={this.mobile}>
-            <div className="title" style={{ 'height': '150px' }}>
+            <div className="title" style={{ 'height': '200px' }}>
               <p style={{ 'text-align' : 'center', 'font-size' : '5em', 'padding-top': '60px' }}> { company.name } </p>
             </div>
           </MediaQuery>

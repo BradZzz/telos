@@ -154,7 +154,7 @@ Main
     }
 
     .main .title .name {
-      font-size: 5em !important;
+      font-size: 6em !important;
     }
 
     .main .desc .top {
@@ -263,6 +263,7 @@ Footer
     /* Styles */
     .footer .content {
       width : 600px !important;
+      height: 600px !important;
     }
 
     .footer .content .teaser .ttitle {
