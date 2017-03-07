@@ -21,7 +21,7 @@ export default class Home extends React.Component {
         <div className="main cthird">
           <MediaQuery minWidth={this.mobile}>
             <Grid className="title">
-              <Cell col={4}>
+              <Cell col={4} className="lwrapper">
                 <img className="logo" src="images/logo.png"/>
               </Cell>
               <Cell col={6}>
@@ -30,8 +30,8 @@ export default class Home extends React.Component {
             </Grid>
           </MediaQuery>
           <MediaQuery maxWidth={this.mobile}>
-            <div className="title" style={{ 'height': '200px' }}>
-              <p style={{ 'text-align' : 'center', 'font-size' : '5em', 'padding-top': '60px' }}> { company.name } </p>
+            <div className="title">
+              <p style={{ 'text-align' : 'center', 'font-size' : '5em', 'padding-top': '.8em' }}> { company.name } </p>
             </div>
           </MediaQuery>
           <div className="desc">

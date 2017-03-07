@@ -107,16 +107,19 @@ Main
     position: relative;
     margin: 0 auto;
     width: 70%;
+    height: 200px;
 }
 
-.main .title .logoWrapper {
-    width: 30%;
-    display: inline-block;
-    margin-right: 50px;
+
+.main .title .lwrapper {
+    height: 100%;
 }
 
-.main .title .logoWrapper .logo {
-    height: 250px;
+.main .title .lwrapper .logo {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
 }
 
 .main .title .name {
@@ -162,7 +165,26 @@ Main
     }
 
     .main .desc .bottom {
-        margin: 35px 20px 0 20px !important;
+      margin: 35px 20px 0 20px !important;
+    }
+}
+
+@media only screen and (max-width : 340px) {
+    /* Styles */
+    .main {
+        height: 77vh;
+    }
+
+    .main .title {
+      height: 140px !important;
+    }
+
+    .main .desc .top {
+      font-size: 1.2em !important;
+    }
+
+    .main .desc .bottom {
+      font-size: 1em !important;
     }
 }
 
@@ -266,6 +288,10 @@ Footer
       height: 600px !important;
     }
 
+    .footer .content .teaser {
+      margin-bottom: 1.8em;
+    }
+
     .footer .content .teaser .ttitle {
       font-size: 2em !important;
     }
@@ -275,5 +301,25 @@ Footer
     /* Styles */
     .footer .content {
       width : 280px !important;
+    }
+
+    .footer .content .legal .lcorresp {
+      margin-top: .6em;
+    }
+}
+
+@media only screen and (max-width : 340px) {
+    /* Styles */
+    .footer .content {
+      height: 500px !important;
+    }
+
+    .footer .content .legal {
+      margin-top: 2.4em !important;
+    }
+
+
+    .footer .content .legal .lcorresp {
+      margin-top: .6em !important;
     }
 }

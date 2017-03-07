@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Textfield, Grid, Cell } from 'react-mdl';
 import RaisedButton from 'material-ui/RaisedButton';
+import MediaQuery from 'react-responsive'
 
 const styles = {
     button: {
@@ -21,6 +22,7 @@ export default class Footer extends React.Component {
     this.legal = "© 2017 by Telos.io |"
     this.made = " lovingly made in Seattle"
     this.correspond = "inspire@telos.io"
+    this.smallMobile = 340
     this.state = { value: 0 }
   }
 
@@ -50,9 +52,11 @@ export default class Footer extends React.Component {
             <div className="ttitle cfirst">
               { this.teaserTitle }
             </div>
-            <div className="tdesc csecond">
-              { this.teaserDesc }
-            </div>
+            <MediaQuery minWidth={this.smallMobile}>
+              <div className="tdesc csecond">
+                { this.teaserDesc }
+              </div>
+            </MediaQuery>
           </div>
           <div>
             <span className="tag cthird">
