@@ -1,0 +1,514 @@
+/*! app.less */
+/*! elements.less
+ *
+ * Uses elements derived from LESS Elements 0.9 by Dmitry Fadeyev
+ * (http://lesselements.com)
+ *
+ * NOTE: the css version of this file is auto-generated, so only edit the original
+ * less version if you don't want your changes to be overwritten.
+ */
+/*! definitions.less
+ *
+ * NOTE: the css version of this file is auto-generated, so only edit the original
+ * less version if you don't want your changes to be overwritten.
+ */
+@import url('//fonts.googleapis.com/css?family=Oxygen:400,700');
+/* Colors */
+/* Button Colors */
+/* Hues Using */
+body {
+  font-family: 'Oxygen' "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.rounded {
+  border-radius: 5px;
+  background: #082742;
+  padding: 6px;
+}
+.selectable {
+  cursor: pointer;
+  outline: none;
+}
+.show {
+  visibility: visible;
+}
+.hide {
+  visibility: hidden;
+}
+.remove {
+  display: none !important;
+}
+.border {
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+.background.green {
+  background: rgba(37, 148, 107, 0.3) !important;
+}
+.background.green:hover {
+  background: rgba(3, 99, 63, 0.3) !important;
+}
+.background.red {
+  background: rgba(176, 28, 48, 0.3) !important;
+}
+.background.red:hover {
+  background: rgba(105, 0, 14, 0.3) !important;
+}
+.background.yellow {
+  background: rgba(232, 232, 0, 0.3) !important;
+}
+.background.yellow:hover {
+  background: rgba(144, 144, 0, 0.3) !important;
+}
+.color.red {
+  color: rgba(207, 23, 84, 0.8) !important;
+}
+.color.green {
+  color: rgba(29, 207, 23, 0.8) !important;
+}
+.color.blue {
+  color: rgba(77, 166, 196, 0.8) !important;
+}
+.color.blue-sky {
+  color: rgba(64, 150, 238, 0.8) !important;
+}
+button.md-raised {
+  color: rgba(0, 0, 0, 0.8);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(225, 232, 235, 0.8)), color-stop(1, #FFF));
+  background: -ms-linear-gradient(bottom, rgba(225, 232, 235, 0.8), #FFF);
+  background: -moz-linear-gradient(center bottom, rgba(225, 232, 235, 0.8) 0%, #FFF 100%);
+  background: -o-linear-gradient(#FFF, rgba(225, 232, 235, 0.8));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='rgba(225, 232, 235, 0.8)', GradientType=0);
+  background: rgba(255, 255, 255, 0.8);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(225, 232, 235, 0.8) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(225, 232, 235, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(225, 232, 235, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+button.md-raised:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(225, 232, 235, 0.8)), color-stop(1, #FFF));
+  background: -ms-linear-gradient(bottom, rgba(225, 232, 235, 0.8), #FFF);
+  background: -moz-linear-gradient(center bottom, rgba(225, 232, 235, 0.8) 0%, #FFF 100%);
+  background: -o-linear-gradient(#FFF, rgba(225, 232, 235, 0.8));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='rgba(225, 232, 235, 0.8)', GradientType=0);
+  background: rgba(225, 232, 235, 0.8);
+  background: -moz-linear-gradient(top, rgba(225, 232, 235, 0.8) 0%, rgba(225, 232, 235, 0.8) 100%);
+  background: -webkit-linear-gradient(top, rgba(225, 232, 235, 0.8) 0%, rgba(225, 232, 235, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(225, 232, 235, 0.8) 0%, rgba(225, 232, 235, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0);
+}
+button.md-raised.active {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(37, 128, 207, 0.8)), color-stop(1, #FFF)) !important;
+  background: -ms-linear-gradient(bottom, rgba(37, 128, 207, 0.8), #FFF) !important;
+  background: -moz-linear-gradient(center bottom, rgba(37, 128, 207, 0.8) 0%, #FFF 100%) !important;
+  background: -o-linear-gradient(#FFF, rgba(37, 128, 207, 0.8)) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='rgba(37, 128, 207, 0.8)', GradientType=0) !important;
+  background: rgba(64, 150, 238, 0.8) !important;
+  background: -moz-linear-gradient(top, rgba(64, 150, 238, 0.8) 0%, rgba(37, 128, 207, 0.8) 100%) !important;
+  background: -webkit-linear-gradient(top, rgba(64, 150, 238, 0.8) 0%, rgba(37, 128, 207, 0.8) 100%) !important;
+  background: linear-gradient(to bottom, rgba(64, 150, 238, 0.8) 0%, rgba(37, 128, 207, 0.8) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0) !important;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+button.md-raised.active:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(37, 128, 207, 0.8)), color-stop(1, #FFF)) !important;
+  background: -ms-linear-gradient(bottom, rgba(37, 128, 207, 0.8), #FFF) !important;
+  background: -moz-linear-gradient(center bottom, rgba(37, 128, 207, 0.8) 0%, #FFF 100%) !important;
+  background: -o-linear-gradient(#FFF, rgba(37, 128, 207, 0.8)) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='rgba(37, 128, 207, 0.8)', GradientType=0) !important;
+  background: rgba(37, 128, 207, 0.8) !important;
+  background: -moz-linear-gradient(top, rgba(37, 128, 207, 0.8) 0%, rgba(37, 128, 207, 0.8) 100%) !important;
+  background: -webkit-linear-gradient(top, rgba(37, 128, 207, 0.8) 0%, rgba(37, 128, 207, 0.8) 100%) !important;
+  background: linear-gradient(to bottom, rgba(37, 128, 207, 0.8) 0%, rgba(37, 128, 207, 0.8) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0) !important;
+}
+.center-horizontal {
+  text-align: center;
+  margin: 0 auto;
+}
+.center-vertical-parent {
+  display: inline-flex;
+  align-items: center;
+}
+.center-vertical-parent.small {
+  height: 60px;
+}
+.center-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media-rating-wrapper {
+  text-align: center;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  height: 20px;
+  width: 24px;
+  margin-right: 20px;
+}
+.media-rating-wrapper .media-rating-huebox {
+  text-align: center;
+  border-radius: 5px;
+  height: 40px;
+  width: 44px;
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
+  background: green;
+  opacity: .2;
+}
+.background-parent-first {
+  position: relative;
+}
+.background-parent-first div {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.background-parent-first div.fade:hover {
+  opacity: .2 !important;
+}
+.background-parent {
+  position: relative;
+}
+.background-parent div {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+@media screen and (max-width: 960px) {
+  .settings .list-wrapper {
+    display: block;
+  }
+  .settings .list-wrapper .list-child {
+    margin: 0 30px;
+  }
+  .profile .content .profile-wrapper {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .media .media-image-wrapper {
+    margin: 0 auto 20px auto;
+  }
+  .media .media-meta-wrapper {
+    margin: 0 !important;
+  }
+  .media .media-meta-wrapper .media-title {
+    text-align: center;
+    margin: 20px !important;
+  }
+  .header .nav-icons .nav-home {
+    margin-right: 30px !important;
+  }
+  .profile .content {
+    height: 115vh !important;
+  }
+  .profile .content .profile-avatar,
+  .profile .content .profile-overlay {
+    margin: 30px 0 0 24px !important;
+  }
+  .profile .content .background-picker {
+    min-height: 80px !important;
+    max-height: 80px !important;
+    min-width: 160px !important;
+    max-width: 160px !important;
+    width: 100% !important;
+  }
+  .profile .content md-input-container.md-block {
+    padding-bottom: 10px !important;
+  }
+  .profile .content .footer.md-raised {
+    margin: 5px auto 10px auto !important;
+  }
+  .main .cast-play.md-fab {
+    min-width: 40px !important;
+    max-width: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+  }
+  .main .img-wrapper {
+    min-height: 300px !important;
+    max-height: 300px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+  }
+}
+.flash-bar {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+}
+.loading-bar {
+  margin: 30vh auto 0 auto;
+}
+.header .nav-media-wrapper {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.header .nav-media-wrapper .nav-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: gray;
+  opacity: 0;
+}
+.header .nav-media-wrapper .nav-background:hover {
+  opacity: .2;
+}
+.header .nav-media:hover {
+  border: 1px solid #fff;
+}
+.header md-content.top-nav {
+  color: white !important;
+}
+.header .nav-icons .nav-home {
+  text-align: right;
+  max-width: 60px;
+  margin-right: 80px;
+}
+.header .profile-avatar {
+  border: 1px solid rgba(225, 232, 235, 0.8);
+}
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+.animate-show.ng-hide {
+  opacity: 0;
+}
+.main .parent:hover {
+  opacity: .2;
+}
+.main .sq-button {
+  max-height: 20px;
+  max-width: 50px;
+}
+.main .nav-title {
+  font-weight: bold;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.main .img-wrapper {
+  position: relative;
+  min-height: 400px;
+  max-height: 400px;
+  min-width: 300px;
+  max-width: 300px;
+}
+.main .img-wrapper img {
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+.main .img-wrapper .show-box {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+}
+.main .img-wrapper .show-box:hover {
+  background: black;
+  opacity: .5;
+}
+.local-player {
+  border: 2px solid;
+  border-radius: 5px;
+  height: 90vh;
+}
+.local-player .videogular-container {
+  width: 100%;
+  height: 320px;
+  margin: auto;
+  overflow: hidden;
+}
+.media .content .media-meta-wrapper {
+  margin: 0 20px;
+}
+.media .content .media-meta-wrapper .media-title {
+  font-weight: bold;
+  margin: 20px 0;
+}
+.media .content .media-image-wrapper {
+  position: relative;
+  min-height: 220px;
+  max-height: 220px;
+  min-width: 150px;
+  max-width: 150px;
+}
+.media .content .media-image-wrapper .media-image {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  position: absolute;
+}
+.media .content .media-image-wrapper .media-overlay {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.media .content .media-image-wrapper .media-overlay .media-overlay-background {
+  background: gray;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin: 2px;
+  position: absolute;
+  opacity: .5;
+}
+.media .content .media-image-wrapper .media-overlay:hover {
+  opacity: 1;
+}
+.analytics .content {
+  position: relative;
+  height: 88vh;
+}
+.analytics .content .header-details-wrapper {
+  height: 80px;
+}
+.analytics .content .header-details-wrapper div {
+  display: block;
+}
+.analytics .content .header-timer-wrapper {
+  height: 40px;
+}
+.analytics .content #breakdown-container {
+  border: 2px solid #000;
+  border-radius: 5px;
+  min-width: 600px;
+  height: height: 400px;
+  max-width: 600px;
+  margin: 0 auto 0 10px;
+}
+.profile .content {
+  position: relative;
+  height: 88vh;
+  min-height: 620px;
+}
+.profile .content .profile-wrapper {
+  width: 50%;
+  max-height: 300px;
+}
+.profile .content .profile-avatar {
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  height: 120px;
+  width: 120px;
+  margin: 30px 0 0 16px;
+  border-radius: 50%;
+}
+.profile .content .profile-overlay {
+  opacity: 0;
+  height: 120px;
+  width: 120px;
+  background: white;
+  position: absolute;
+  margin: 30px 0 0 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.profile .content .profile-overlay .icon {
+  padding-left: 8px;
+}
+.profile .content .profile-overlay:hover {
+  opacity: .8;
+}
+.profile .content .background-picker {
+  border: 2px solid #000;
+  margin-top: 30px;
+  min-height: 160px;
+  max-height: 160px;
+  min-width: 320px;
+  max-width: 320px;
+  text-align: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.profile .footer {
+  position: relative;
+}
+.profile .footer.md-raised {
+  margin: 5px auto 50px auto;
+}
+span.icon,
+md-icon.icon {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+span.icon:hover,
+md-icon.icon:hover {
+  opacity: .5;
+}
+.thumb {
+  width: 24px;
+  height: 24px;
+  float: none;
+  position: relative;
+  top: 7px;
+}
+form .progress {
+  line-height: 15px;
+}
+.progress {
+  display: inline-block;
+  width: 100px;
+  border: 3px groove #CCC;
+}
+.progress div {
+  font-size: smaller;
+  background: orange;
+  width: 0;
+}
