@@ -22,8 +22,8 @@ class MainContainer extends Component {
 
   constructor(props) {
     super(props);
-    this.tabs = ['Home','Features','Pricing','Demos','Customers','Donate']
-    this.pages = [<Home />, <Features />, <Pricing />, <Demos />, <Customers />, <Donate />]
+    this.tabs = ['Home','Features','Pricing',/*'Demos',*/'Customers','Donate']
+    this.pages = [<Home />, <Features />, <Pricing />, /*<Demos />,*/ <Customers />, <Donate />]
     this.state = { page: 0 }
   }
 

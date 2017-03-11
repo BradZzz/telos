@@ -40,6 +40,12 @@ Fonts
 Colors
 
 ***/
+.overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+.subtle {
+  background: #EEEEEE;
+}
 .cfirst {
   color: #02E0FF;
 }
@@ -163,9 +169,10 @@ Main
 .main .title .name {
   display: inline-flex;
   height: 100%;
-  font-size: 10em;
+  font-size: 8.2em;
   align-items: center;
   position: absolute;
+  padding-top: .1em;
 }
 .main .desc {
   width: 100%;

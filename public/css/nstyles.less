@@ -36,6 +36,17 @@ Colors
 
 ***/
 
+@hue-overlay: rgba(0,0,0,.2);
+@hue-subtle: #EEEEEE;
+
+.overlay {
+  background: @hue-overlay;
+}
+
+.subtle {
+  background: @hue-subtle;
+}
+
 .cfirst {
   color: #02E0FF;
 }
@@ -168,9 +179,10 @@ Main
       .name {
         display: inline-flex;
         height: 100%;
-        font-size: 10em;
+        font-size: 8.2em;
         align-items: center;
         position: absolute;
+        padding-top: .1em;
       }
   }
   .desc {
