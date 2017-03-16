@@ -35,29 +35,72 @@ Colors
 
 ***/
 
+@hue-first: #05242D;
+@hue-firstalt: #0C313C;
+@hue-firsttext: #02E0FF;
+@hue-second: #CFD8DC;
+
 @hue-overlay: rgba(0,0,0,.2);
+@hue-overlay-dark: rgba(0,0,0,.6);
 @hue-subtle: #EEEEEE;
 
 .overlay {
-  background: @hue-overlay;
+  color: @hue-overlay;
 }
 
 .subtle {
-  background: @hue-subtle;
+  color: @hue-subtle;
 }
 
 .cfirst {
-  color: #02E0FF;
+  color: @hue-firsttext;
+}
+
+.cfirstalt {
+  color: @hue-firstalt;
 }
 
 .csecond {
-  color: #CFD8DC;
+  color: @hue-second;
 }
 
 .cthird {
-  color: #EEEEEE;
+  color: @hue-subtle;
 }
 
+/***
+
+Background
+
+***/
+
+.overlayb {
+  background: @hue-overlay;
+}
+
+.overlaybdark {
+  background: @hue-overlay-dark;
+}
+
+.subtleb {
+  background: @hue-subtle;
+}
+
+.cfirstb {
+  background: @hue-first;
+}
+
+.cfirstaltb {
+  background: @hue-firstalt;
+}
+
+.csecondb {
+  background: @hue-second;
+}
+
+.cthirdb {
+  background: @hue-subtle;
+}
 
 /***
 
@@ -91,8 +134,23 @@ General
   height: 100%;
 }
 
+.half {
+  height: 50%;
+}
+
 .white {
   background: white;
+}
+
+.img-wrap {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto !important;
+}
+
+.img-wrap img {
+  margin: auto;
+  display: block;
 }
 
 .defBack {

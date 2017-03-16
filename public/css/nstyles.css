@@ -32,19 +32,48 @@ Colors
 
 ***/
 .overlay {
-  background: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 .subtle {
-  background: #EEEEEE;
+  color: #EEEEEE;
 }
 .cfirst {
   color: #02E0FF;
+}
+.cfirstalt {
+  color: #0C313C;
 }
 .csecond {
   color: #CFD8DC;
 }
 .cthird {
   color: #EEEEEE;
+}
+/***
+
+Background
+
+***/
+.overlayb {
+  background: rgba(0, 0, 0, 0.2);
+}
+.overlaybdark {
+  background: rgba(0, 0, 0, 0.6);
+}
+.subtleb {
+  background: #EEEEEE;
+}
+.cfirstb {
+  background: #05242D;
+}
+.cfirstaltb {
+  background: #0C313C;
+}
+.csecondb {
+  background: #CFD8DC;
+}
+.cthirdb {
+  background: #EEEEEE;
 }
 /***
 
@@ -76,8 +105,20 @@ General
 .full {
   height: 100%;
 }
+.half {
+  height: 50%;
+}
 .white {
   background: white;
+}
+.img-wrap {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto !important;
+}
+.img-wrap img {
+  margin: auto;
+  display: block;
 }
 .defBack {
   background: linear-gradient(#021F27, #0C323D);

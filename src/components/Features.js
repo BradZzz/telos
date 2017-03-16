@@ -17,7 +17,7 @@ export default class Features extends React.Component {
     return (
       <div>
         <div className="main cthird">
-          <Grid className="full subtle" style={{ "padding" : "0px" }}>
+          <Grid className="full subtleb" style={{ "padding" : "0px" }}>
             <MediaQuery minWidth={this.mobile}>
               <Cell className="defBackPlain" style={{ "padding-top" : "15px", "margin" : "0px", "position" : "relative", "width":"325px" }}>
                 <img src="images/logo.png" style={{ "position": "absolute", "left": "-5em", "width": "600px" }}/>

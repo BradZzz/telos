@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { Grid, Cell } from 'react-mdl'
-import zip from 'lodash/zip'
 
 // Bottom and top parts
 import Header from '../components/Header'
