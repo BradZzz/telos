@@ -12,6 +12,7 @@ import Pricing from '../components/Pricing'
 import Demos from '../components/Demos'
 import Customers from '../components/Customers'
 import Donate from '../components/Donate'
+import Splash from '../components/Splash'
 
 // Helpers
 import Screen from '../components/Screen';
@@ -20,8 +21,8 @@ class MainContainer extends Component {
 
   constructor(props) {
     super(props);
-    this.tabs = ['Home','Features','Pricing',/*'Demos',*/'Customers','Donate']
-    this.pages = [<Home />, <Features />, <Pricing />, /*<Demos />,*/ <Customers />, <Donate />]
+    this.tabs = ['Splash', 'Home','Features','Pricing',/*'Demos',*/'Customers','Donate']
+    this.pages = [<Splash />, <Home />, <Features />, <Pricing />, /*<Demos />,*/ <Customers />, <Donate />]
     this.state = { page: 0 }
   }
 
@@ -30,12 +31,21 @@ class MainContainer extends Component {
     this.setState({ page: value })
   }
 
+//  render() {
+//    return (
+//      <div>
+//        <Screen />
+//        <Splash />
+//        <Footer/>
+//      </div>
+//    )
+//  }
+
   render() {
     return (
       <div>
-        <Screen />
-        <Header tabs={this.tabs} callback={this.handleChange}/>
-        { this.pages[this.state.page] }
+        <Screen/>
+        <Demos/>
         <Footer/>
       </div>
     )

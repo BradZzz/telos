@@ -1,13 +1,15 @@
 import React, { PropTypes } from 'react'
 import { Textfield, Grid, Cell } from 'react-mdl';
 import RaisedButton from 'material-ui/RaisedButton';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 import MediaQuery from 'react-responsive'
 
 const styles = {
     button: {
-        width: 160,
-        height: 66,
-        padding: 0
+        width: 300,
+        height: 50,
+        padding: 0,
     }
 };
 
@@ -16,72 +18,56 @@ export default class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.inputs = ['Name','Email']
-    this.teaserTitle = "Telos how we can help you accomplish your dreams!"
-    this.teaserDesc = "We are built by former students to solve your frustrations surrounding traditional education institutions."
-    this.tagPhrase = "Sign-up and we'll let you know when we are accepting more students!"
-    this.legal = "© 2017 by Telos.io |"
-    this.made = " lovingly made in Seattle"
-    this.correspond = "inspire@telos.io"
-    this.smallMobile = 340
-    this.state = { value: 0 }
+    this.teaser = "Reach out to learn more."
+    this.copy = "Education"
+    this.copy2 = "in the 21st Century."
+    this.state = { value: 0, pick: 0 }
   }
 
+  handlePick = (event, index, value) => this.setState({value : value})
 
   handleChange = (value) => {
-    console.log("Clicked: " + value)
-    this.setState({ value: value })
+    console.log(value)
+    this.setState({ pick: value })
   }
 
   renderInput = (input, idx) => {
     return (
-      <Cell col={4} key={idx}>
+      <div key={idx}>
         <Textfield
             className="input"
             onChange={this.handleChange}
             label={input}
         />
-      </Cell>
+      </div>
     )
+  }
+
+  dropClass = () => {
+    return "dropdown" + (this.state.value > 0 ? " selected" : "")
   }
 
   render() {
     return (
       <div className="footer">
+        <div className="underlay"></div>
         <div className="content">
-          <div className="teaser">
-            <div className="ttitle cfirst">
-              { this.teaserTitle }
-            </div>
-            <MediaQuery minWidth={this.smallMobile}>
-              <div className="tdesc csecond">
-                { this.teaserDesc }
-              </div>
-            </MediaQuery>
-          </div>
+          <span style={{ 'font-weight' : 'bold', 'font-size' : '1.2em' }}>{ this.teaser }</span>
+          { this.inputs.map(this.renderInput) }
+          <SelectField
+            floatingLabelText="Who are you?"
+            value={this.state.value}
+            onChange={this.handlePick}
+            className={this.dropClass()}
+          >
+            <MenuItem value={1} primaryText="I am a learner." />
+            <MenuItem value={2} primaryText="I am an educator." />
+            <MenuItem value={3} primaryText="I am a public institution." />
+          </SelectField>
           <div>
-            <span className="tag cthird">
-              { this.tagPhrase }
-            </span>
-          </div>
-          <Grid>
-            { this.inputs.map(this.renderInput) }
-            <Cell col={4} className="submit">
-              <RaisedButton label="Submit" primary={true} style={styles.button}/>
-            </Cell>
-          </Grid>
-          <div className="legal cfirst">
-            <div>
-              <span className="csecond">
-                { this.legal }
-              </span>
-              { this.made }
-            </div>
-            <div className="lcorresp">
-              { this.correspond }
-            </div>
+            <RaisedButton className="submit" label="Submit" primary={true} style={styles.button}/>
           </div>
         </div>
-        <div className="overlay"></div>
       </div>
     )
   }
