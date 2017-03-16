@@ -167,9 +167,9 @@ Footer
 }
 .footer .content {
   z-index: 2;
-  bottom: 0;
+  bottom: 5em;
   position: absolute;
-  min-height: 25em;
+  min-height: 20em;
   min-width: 50em;
   margin: auto 0 auto 15em;
   vertical-align: bottom;
