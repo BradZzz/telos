@@ -13,7 +13,7 @@ export default class Splash extends React.Component {
   render() {
     return (
       <div className="splash">
-        <img src="../images/telos_long.png" style={{ 'width' : '200px', 'margin' : '5em 0 0 10em' }}/>
+        <img src="../images/telos_long.png" style={{ 'width' : '200px' }}/>
         <div className="content">
           <h2>{ this.copy }</h2>
           <h2>{ this.copy2 }</h2>

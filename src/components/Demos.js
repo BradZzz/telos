@@ -34,7 +34,7 @@ export default class Demos extends React.Component {
   render() {
     return (
       <div className="splash">
-        <img src="../images/telos_long.png" style={{ 'width' : '200px', 'margin' : '5em 0 0 10em' }}/>
+        <img src="../images/telos_long.png" style={{ 'width' : '200px' }}/>
         <div className="content">
           <span style={{ 'font-size' : '1.2em', 'color' : '#eeeeee' }}>{ this.teaser }</span>
           { this.inputs.map(this.renderInput) }

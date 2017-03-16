@@ -155,6 +155,9 @@ Splash
     margin: auto 0 auto 15em;
     vertical-align: bottom;
   }
+  img {
+    margin : 5em 0 0 10em;
+  }
 }
 
 
@@ -197,5 +200,29 @@ Footer
     .submit button {
       background-color: @hue-subtle-reverse !important;
     }
+  }
+}
+
+/***
+
+Mobile
+
+***/
+
+@media only screen and (max-width : 600px) {
+  /* Styles */
+  .splash {
+    img {
+      margin : 1em 0 0 1em;
+    }
+  }
+  .footer {
+    .underlay {
+      background-size: 200px 200px;
+      background-position: 50% 18%;
+    }
+  }
+  .content {
+    margin: auto 0 auto 3em !important;
   }
 }
