@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 class App extends Component {
   static propTypes = {
-    // Injected by React Router
     children: PropTypes.node
   }
 
