@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react'
-import { Textfield, Grid, Cell } from 'react-mdl';
-import RaisedButton from 'material-ui/RaisedButton';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import { Textfield, Grid, Cell } from 'react-mdl'
+import RaisedButton from 'material-ui/RaisedButton'
+import SelectField from 'material-ui/SelectField'
+import MenuItem from 'material-ui/MenuItem'
 import MediaQuery from 'react-responsive'
+import { vh } from 'react-native-viewport-units'
 
 const styles = {
     button: {
@@ -49,10 +50,10 @@ export default class Footer extends React.Component {
 
   render() {
     return (
-      <div className="footer">
+      <div className="footer" style={{ height:100*vh }}>
         <div className="underlay"></div>
         <div className="content">
-          <span style={{ 'font-weight' : 'bold', 'font-size' : '1.2em' }}>{ this.teaser }</span>
+          <span className="teaser">{ this.teaser }</span>
           { this.inputs.map(this.renderInput) }
           <SelectField
             floatingLabelText="Who are you?"

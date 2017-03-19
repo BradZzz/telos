@@ -136,7 +136,6 @@ Splash
   background-size: cover;
   display: block;
   position: relative;
-  height: 100vh;
   .overlay {
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
@@ -175,7 +174,6 @@ Footer
   background-size: cover;
   display: block;
   position: relative;
-  height: 100vh;
   .underlay {
     background: url('../images/logo_w.svg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -199,6 +197,10 @@ Footer
     vertical-align: bottom;
     .submit button {
       background-color: @hue-subtle-reverse !important;
+    }
+    .teaser {
+      font-weight : bold;
+      font-size : 1.2em;
     }
   }
 }
@@ -227,5 +229,21 @@ Mobile
   }
   .content {
     margin: auto 0 auto 3em !important;
+  }
+}
+
+@media only screen and (max-width : 460px) {
+  /* Styles */
+  .mdl-textfield, .dropdown, .submit, .login {
+    width: 280px !important;
+  }
+  .content {
+    margin: auto 0 auto 2em !important;
+  }
+  .splash h2 {
+    font-size : 1.2em !important;
+  }
+  .footer .teaser {
+    font-size : .9em !important;
   }
 }

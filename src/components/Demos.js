@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { Textfield, Grid, Cell } from 'react-mdl';
 import RaisedButton from 'material-ui/RaisedButton';
 import MediaQuery from 'react-responsive'
+import { vh } from 'react-native-viewport-units'
 
 const styles = {
     button: {
@@ -33,7 +34,7 @@ export default class Demos extends React.Component {
 
   render() {
     return (
-      <div className="splash">
+      <div className="splash" style={{ height:100*vh }}>
         <img src="../images/telos_long.png" style={{ 'width' : '200px' }}/>
         <div className="content">
           <span style={{ 'font-size' : '1.2em', 'color' : '#eeeeee' }}>{ this.teaser }</span>

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
 
 class App extends Component {
   static propTypes = {
@@ -16,9 +15,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  errorMessage: state.errorMessage,
-  inputValue: ownProps.location.pathname.substring(1)
-})
-
-export default connect(mapStateToProps, {})(App)
+export default App
