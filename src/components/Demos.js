@@ -40,7 +40,7 @@ export default class Demos extends React.Component {
           <span style={{ 'font-size' : '1.2em', 'color' : '#eeeeee' }}>{ this.teaser }</span>
           { this.inputs.map(this.renderInput) }
           <div style={{ 'margin-top' : '1em'}}>
-            <RaisedButton className="login" label="Login" primary={true} style={styles.button}/>
+            <RaisedButton href="http://ec2-54-209-70-240.compute-1.amazonaws.com/login" target="_blank" className="login" label="Login" primary={true} style={styles.button}/>
           </div>
         </div>
       </div>
