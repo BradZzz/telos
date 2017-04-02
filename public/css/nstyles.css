@@ -197,8 +197,8 @@ Mobile
     background-position: 50% 18%;
   }
   .content {
-    margin: auto 0 auto 3em !important;
-    min-width: 87% !important;
+    margin: auto 0 auto 1em !important;
+    min-width: 80% !important;
   }
   .mdl-textfield,
   .dropdown,
@@ -214,8 +214,8 @@ Mobile
     width: 280px !important;
   }
   .content {
-    margin: auto 0 auto 2em !important;
-    min-width: 100% !important;
+    margin: auto 0 auto 1em !important;
+    min-width: 80% !important;
   }
   .splash h2 {
     font-size : 1.2em !important;
