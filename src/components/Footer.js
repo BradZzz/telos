@@ -60,6 +60,7 @@ export default class Footer extends React.Component {
         ip : ip,
       }
       DATA.DB.ref('users/' + window.btoa(email)).set(payload)
+      alert("Thank you for your interest! We will get back to you as soon as we can!")
     } else {
       alert("Please fill out all fields before submitting")
     }
